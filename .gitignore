@@ -1,0 +1,12 @@
+# dependencies
+node_modules/
+apps/server/node_modules/
+apps/web/node_modules/
+
+# build output
+apps/web/.next/
+dist/
+build/
+
+# lockfiles (if using pnpm)
+pnpm-lock.yaml

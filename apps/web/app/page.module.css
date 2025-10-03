@@ -1,0 +1,67 @@
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Input field */
+.input {
+  flex: 1;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.4);
+}
+
+/* Primary button (Add Ticker) */
+.button {
+  background: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.button:hover {
+  background: #1e40af;
+  transform: translateY(-1px);
+}
+
+/* Remove button */
+.removeButton {
+  color: #ef4444;
+  font-weight: bold;
+  background: none;
+  border: none;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.removeButton:hover {
+  color: #b91c1c;
+}
+
+/* Highlight row when updated */
+.highlight {
+  font-weight: bold;
+  transition: font-weight 0.3s ease;
+}
+

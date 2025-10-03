@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+
+package pluto;
+// Empty message for simple requests
+message Empty {}
+
+message AddTickerRequest {
+  string ticker = 1;
+}
+
+message RemoveTickerRequest {
+  string ticker = 1;
+}
+
+message ListTickersResponse {
+  repeated string tickers = 1;
+}
+
+message StreamPricesRequest {
+  repeated string tickers = 1;
+}
+
+message PriceUpdate {
+  string ticker = 1;
+  double price = 2;
+  int64 ts_ms = 3; // timestamp in milliseconds
+}
+
+service TickerService {
+  rpc AddTicker(AddTickerRequest) returns (ListTickersResponse);
+  rpc RemoveTicker(RemoveTickerRequest) returns (ListTickersResponse);
+  rpc ListTickers(Empty) returns (ListTickersResponse);
+  rpc StreamPrices(StreamPricesRequest) returns (stream PriceUpdate);
+}

@@ -1,0 +1,19 @@
+{
+  "name": "fullstack-coding-assessment",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "gen": "cd proto && buf generate",
+    "dev": "pnpm run gen && pnpm -r --parallel dev",
+    "start": "./run.sh"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "1.10.0",
+    "express": "^5.1.0",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@bufbuild/protoc-gen-connect-es": "0.13.0",
+    "@bufbuild/protoc-gen-es": "1.10.1"
+  }
+}
